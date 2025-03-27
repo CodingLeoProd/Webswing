@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Logo mit Regenbogen Farbverlauf und Affe</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 1400% 1400%;
+            animation: rainbow 10s ease infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logout-icon img {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        .monkey {
+            position: absolute;
+            bottom: 0;
+            animation: moveMonkey 10s linear infinite;
+        }
+
+        @keyframes moveMonkey {
+            0% { left: -100px; }
+            50% { left: calc(100% - 100px); }
+            100% { left: -100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-icon">
+        <img src="logout.png" alt="Logout">
+    </div>
+    <div class="message">
+        <p>Sie wurden abgemeldet. Bitte starten Sie die Anwendung neu, um sich erneut anzumelden. Sie können diese Seite schliessen.</p>
+        <p>Vous avez été déconnecté. Veuillez redémarrer l'application pour vous reconnecter. Vous pouvez fermer cette page.</p>
+        <p>Sei stato disconnesso. Riavvia l'applicazione per accedere nuovamente. È possibile chiudere questa pagina.</p>
+        <p>You have been logged out. Please restart the application to log in again. You can close this page.</p>
+    </div>
+    <img src="monkey.gif" alt="Monkey" class="monkey">
+</body>
+</html>
