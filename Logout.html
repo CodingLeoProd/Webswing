@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout Logo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .logout-icon img {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-icon">
+        <img src="logout.png" alt="Logout">
+    </div>
+    <div class="message">
+        <p>Sie wurden abgemeldet. Bitte starten Sie die Anwendung neu, um sich erneut anzumelden. Sie können diese Seite schliessen.</p>
+        <p>Vous avez été déconnecté. Veuillez redémarrer l'application pour vous reconnecter. Vous pouvez fermer cette page.</p>
+        <p>Sei stato disconnesso. Riavvia l'applicazione per accedere nuovamente. È possibile chiudere questa pagina.</p>
+        <p>You have been logged out. Please restart the application to log in again. You can close this page.</p>
+    </div>
+</body>
+</html>
