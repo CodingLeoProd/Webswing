@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout Logo</title>
+    <title>TAC Web</title>
     <style>
         body {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start;
             height: 100vh;
             margin: 0;
-        }
-
-        .logout-icon img {
-            width: 150px;
-            height: 150px;
-            margin-top: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .message {
-            text-align: center;
             font-family: Arial, sans-serif;
-            margin-top: 20px;
+        }
+        .container {
+            text-align: center;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .text {
+            font-size: 24px;
+            margin-top: 10px;
+            cursor: pointer;
         }
     </style>
+    <script>
+        function getComputerName() {
+            // Diese Funktion ist ein Platzhalter. Die tatsächliche Implementierung hängt von der Umgebung ab.
+            // In einer Webumgebung ist es nicht möglich, den Computernamen direkt zu erhalten.
+            return 'localhost'; // Beispielwert
+        }
+
+        function openLink() {
+            const computerName = getComputerName();
+            const url = `https://ra-webswing.migros.net/ra${computerName}`;
+            window.location.href = url;
+        }
+    </script>
 </head>
 <body>
-    <div class="logout-icon">
-        <img src="logout.png" alt="Logout">
-    </div>
-    <div class="message">
-        <p>Sie wurden abgemeldet. Bitte starten Sie die Anwendung neu, um sich erneut anzumelden. Sie können diese Seite schliessen.</p>
-        <p>Vous avez été déconnecté. Veuillez redémarrer l'application pour vous reconnecter. Vous pouvez fermer cette page.</p>
-        <p>Sei stato disconnesso. Riavvia l'applicazione per accedere nuovamente. È possibile chiudere questa pagina.</p>
-        <p>You have been logged out. Please restart the application to log in again. You can close this page.</p>
+    <div class="container">
+        <div class="logos">
+            <div onclick="openLink()">
+                <img src="logo.png" alt="TAC Live Logo" class="logo">
+                <div class="text">TAC Live</div>
+            </div>
+            <div>
+                <img src="logo.png" alt="TAC Live Admin Logo" class="logo">
+                <div class="text">TAC Live Admin</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
